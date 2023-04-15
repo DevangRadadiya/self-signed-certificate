@@ -9,21 +9,37 @@ OpenSSL
 1. Run the script using the command ./generate_certificate.sh
 2. Enter the required details when prompted:
     Subject Alternative Name (SAN)
+    
     Country (C) code
+    
     State/Province (ST)
+    
     City/Locality (L)
+    
     Organization (O)
+    
     Organizational Unit (OU)
+    
     Common Name (CN)
+    
     Email Address
+    
     Issuer Name
+    
     Passphrase for the PFX file
+    
 3. The script will generate the following files in the current directory:
+
     CN.key - private key
+    
     CN.csr - certificate signing request
+    
     CN.crt - signed certificate
+    
     CN.pfx - PFX file containing the certificate and private key
+    
     CN_fullchain.pem - file containing the full chain of trust
+    
     issuerName.pem - issuer certificate
     
 Note: Replace CN with the value of the Common Name (CN) entered during the script execution.
