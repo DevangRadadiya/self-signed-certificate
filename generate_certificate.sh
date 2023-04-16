@@ -1,28 +1,43 @@
 #!/bin/bash
 
+function check_input {
+  if [[ ${#1} -lt 2 ]]; then
+    echo "Error: Please enter at least two characters."
+    exit 1
+  fi
+}
+
+
 # Get input from the user
-echo "Enter the Subject Alternative Name (SAN) (e.g. example.com):"
+echo "Enter the Subject Alternative Name (SAN) (e.g. test.devang.com, *.devang.com):"
 read SAN
+check_input "$SAN"
 
-echo "Enter the Country (C) code (e.g. US):"
+echo "Enter the Country (C) code (e.g. GB):"
 read C
+check_input "$C"
 
-echo "Enter the State/Province (ST) (e.g. California):"
+echo "Enter the State/Province (ST) (e.g. London):"
 read ST
+check_input "$ST"
 
-echo "Enter the City/Locality (L) (e.g. San Francisco):"
+echo "Enter the City/Locality (L) (e.g. London ):"
 read L
+check_input "$L"
 
 echo "Enter the Organization (O) (e.g. Example, Inc.):"
 read O
+check_input "$O"
 
 echo "Enter the Organizational Unit (OU) (e.g. IT Department):"
 read OU
+check_input "$OU"
 
-echo "Enter the Common Name (CN) (e.g. example.com):"
+echo "Enter the Common Name (CN) (e.g. devang.com):"
 read CN
+check_input "$CN"
 
-echo "Enter the Email Address (e.g. info@example.com):"
+echo "Enter the Email Address (e.g. info@devang.com):"
 read emailAddress
 
 echo "Enter the issuer name (e.g. devang.com):"
