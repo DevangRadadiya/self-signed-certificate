@@ -1,12 +1,13 @@
-# SSL Certificate Generation Script
+# SSL Certificate Generation Script with SAN and issuer
 
 This script generates an SSL/TLS certificate using OpenSSL. The certificate can be used for securing web servers, mail servers, and other network services.
 
-# Wildcard SAN certificate Generation
+# Self-Signed Wildcard certificate with SAN and issuer
 
 A wildcard SAN certificate allows you to secure multiple subdomains of a domain with a single certificate. For example, if you have a domain named devang.com, a wildcard SAN certificate with a common name of *.devang.com would cover all subdomains of devang.com.
 
 This means that you can use the same wildcard SAN certificate for any subdomain of devang.com, without having to specify each subdomain as a separate SAN entry in the certificate. For example, a wildcard SAN certificate for *.devang.com would cover test.devang.com, blog.devang.com, shop.devang.com, and so on.
+
 
 
 ## Prerequisites
